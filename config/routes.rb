@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:new, :create]
   end
+
+  #resourceはindexなし→idを指定する必要がない
+  resource :profile, only:[:show, :edit, :update]
 end
