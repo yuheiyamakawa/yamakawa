@@ -11,6 +11,7 @@ module Yamakawa
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    if rails.env.development?||rails.env.test?
     Bundler.require(*Rails.groups)
     Dotenv::Railtie.load
 
