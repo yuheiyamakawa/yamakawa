@@ -1,0 +1,16 @@
+{
+    "name": "yamakawa",
+    "description": "This is yamakawa",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/yuheiyamakawa/yamakawa",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
