@@ -5,8 +5,10 @@ Rails.application.routes.draw do
 
   resources :articles do
     resources :comments, only: [:new, :create]
+    resource :like, only: [:create, :destroy]
   end
 
   #resourceはindexなし→idを指定する必要がない
   resource :profile, only:[:show, :edit, :update]
+  resources :favorites, only:[:index]
 end
